@@ -1,0 +1,14 @@
+Productos de control: Atributos Generales de la clase padre(registro ICA, nombre_producto,frecuencia_aplicacion,valor_producto).
+
+-> Control Fertilizantes (fecha_ultima_aplicacion)
+-> Controles de plaga (tiempo_dias_periodo_carencia)
+
+Medicina para animales de granja
+-> Antibióticos: (nombre_producto,dosis_producto,tipo_animales_aptos,precio_producto)
+
+
+Clientes: (Nombre,Cedula)
+
+
+
+Factura: (fecha_facturacion,valor_compra)
