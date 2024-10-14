@@ -1,3 +1,4 @@
+
 class Cliente:
     def __init__(self, nombre_cliente: str, cedula: str):
         self._nombre_cliente = nombre_cliente
@@ -27,3 +28,15 @@ class Cliente:
             raise ValueError("La cédula debe ser numérica y tener al menos 7 dígitos.")
     
  
+    @property
+    def facturas(self):
+        return self._facturas
+    
+    
+    @facturas.setter
+    def facturas(self, factura):
+        self._facturas.append(factura)
+
+
+    def asociar_factura(self, factura):
+        self.facturas = factura
