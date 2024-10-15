@@ -1,5 +1,5 @@
 import unittest
-from Modelo.clase_antibioticos import Antibiotico
+from Modelo.antibioticos import Antibiotico
 
 class TestAntibiotico(unittest.TestCase):
 

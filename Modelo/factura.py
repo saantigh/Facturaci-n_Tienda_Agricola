@@ -1,4 +1,4 @@
-from CLASE_productos_de_control import ProductoControl as pc
+from Modelo.productos_de_control import ProductoControl as pc
 
 class Factura:
     def __init__(self):

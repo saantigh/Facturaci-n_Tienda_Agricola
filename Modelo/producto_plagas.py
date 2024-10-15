@@ -1,4 +1,4 @@
-from CLASE_productos_de_control import ProductoControl
+from Modelo.productos_de_control import ProductoControl
 
 class ControlPlagas(ProductoControl):
     def __init__(self, nombre_producto: str, registro_ica: str, frecuencia_aplicacion: int, precio_producto: float, periodo_carencia: int):
