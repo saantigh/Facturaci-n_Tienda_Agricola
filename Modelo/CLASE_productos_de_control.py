@@ -44,11 +44,11 @@ class ProductoControl:
 
     # Propiedad para precio
     @property
-    def precio(self):
+    def precio_producto(self):
         return self._precio_producto
 
-    @precio.setter
-    def precio(self, precio):
+    @precio_producto.setter
+    def precio_producto(self, precio):
         if precio > 0:
             self._precio_producto = precio
         else:
