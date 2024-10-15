@@ -4,6 +4,8 @@ from Modelo.clase_antibioticos import Antibiotico as antibiotico
 from Modelo.producto_fertilizante import ControlFertilizantes as producto_fertilizante
 from Modelo.producto_plagas import ControlPlagas as producto_plaga
 from Modelo.clase_cliente import Cliente as cliente
+from Modelo.CLASE_productos_de_control import ProductoControl as pc
+
 
 class TestCliente(unittest.TestCase):
     def setup(self):
