@@ -1,31 +1,21 @@
 from Modelo.cliente import Cliente
 from Modelo.factura import Factura
 from CRUD.CRUD import CRUD
+from ui.ui import UI
 
 def main():
-    # crear el crud
+    # Se instancian las clases
     crud = CRUD()
-    # Crear un cliente
-    cliente = Cliente("Juan Pérez", "12345678")
+    ui = UI()
+    opcion = 0
+    if True:
+        while opcion>4 or opcion<1:
+            ui.mostrar_menu_principal()
+            opcion = int(input("Digite su opcion -> "))
+    
 
-    # Agregar Cliente al CRUD
-    crud.agregar_cliente(cliente)
 
-    cliente2 = crud.buscar_por_cedula("12345678")
-
-    nombre_cliente = cliente2.nombre_cliente
-    print(nombre_cliente)
-
-    # Crear una factura
-    factura1 = Factura()
-    factura2 = Factura()
-
-    # Asociar productos a la factura
-    factura1.realizar_venta(producto_control="FertiGrow", antibiotico="Penicilina")
-    factura2.realizar_venta(producto_control="Plaguicida")
-
-    # Asociar facturas al cliente
-    crud.asociar_factura(cliente2,factura2)
+    
 
     # Hacer debug para inspeccionar las composiciones
    # import pdb; pdb.set_trace()
