@@ -34,6 +34,3 @@ class Cliente:
     @facturas.setter
     def facturas(self, factura):
         self.__facturas.append(factura)
-
-    def asociar_factura(self, factura):
-        self.facturas = factura
