@@ -10,9 +10,9 @@ def main():
     opcion = 0
     if True:
         while opcion>4 or opcion<1:
-            ui.mostrar_menu_principal()
-            opcion = int(input("Digite su opcion -> "))
-    
+            opcion = ui.menu_agregar_producto_control()
+    #         opcion = ui.mostrar_menu_principal()
+        
 
 
     
