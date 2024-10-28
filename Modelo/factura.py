@@ -2,9 +2,6 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 
-
-from Modelo.productos_de_control import ProductoControl as pc
-
 class Factura:
     def __init__(self):
         self.__antibiotico = []        
