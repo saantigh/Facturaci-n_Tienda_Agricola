@@ -1,19 +1,19 @@
 class CRUD:
     def __init__(self):
-        self.clientes = []
+        self.clientes = [] #Inicializa la lista de clientes en el sistema
 
     def agregar_cliente(self, cliente):
-        self.clientes.append(cliente) #Inicializa la lista de clientes en el sistema
+        self.clientes.append(cliente) 
 
     def buscar_por_cedula(self, cedula):
         for cliente in self.clientes:
             if cliente.cedula == cedula:
                 return cliente
-        return None
+        return False
 
     def eliminar_cliente(self, cedula):
         cliente = self.buscar_por_cedula(cedula)
-        if cliente is None:
+        if cliente is False:
             raise ValueError("No se puede eliminar, el cliente no existe.")
         self.clientes.remove(cliente)
 

@@ -8,7 +8,7 @@ from Modelo.producto_fertilizante import ControlFertilizantes as producto_fertil
 from Modelo.producto_plagas import ControlPlagas as producto_plaga
 from Modelo.productos_de_control import ProductoControl as pc
 from Modelo.cliente import Cliente as cliente     
-from CRUD.crud import CRUD  # Asegúrate de estar importando la clase CRUD correctamente
+from CRUD.CRUDutilities import CRUD  
 
 class TestCRUD(unittest.TestCase):
 
