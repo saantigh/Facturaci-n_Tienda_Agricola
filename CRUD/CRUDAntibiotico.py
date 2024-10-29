@@ -1,6 +1,7 @@
 from Modelo.antibioticos import Antibiotico
 
 class CRUDAntibiotico:
+    # Stock de 5 productos antibióticos
     @staticmethod
     def create():
         antibiotico1=Antibiotico("antibiotico1",300,"caprinos",87000)

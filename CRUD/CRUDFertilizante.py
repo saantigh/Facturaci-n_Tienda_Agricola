@@ -1,6 +1,7 @@
 from Modelo.producto_fertilizante import ControlFertilizantes
 
 class CRUDFertilizantes:
+    #Stock de 5 productos de control(fertilizantes). 
     @staticmethod
     def create():
         fertilizante1 = ControlFertilizantes("Fertilizante1","ICA237",4,54000,"2024-02-14")
@@ -9,4 +10,4 @@ class CRUDFertilizantes:
         fertilizante4 = ControlFertilizantes("Fertilizante4Gold","ICA652",5,640000,"2024-03-15")
         fertilizante5 = ControlFertilizantes("Fertilizante5Premium","ICA960",8,1025000,"2024-01-12")
 
-        return [fertilizante1,fertilizante2,fertilizante3,fertilizante4,fertilizante5]
+        return [fertilizante1,fertilizante2,fertilizante3,fertilizante4,fertilizante5] 

@@ -11,10 +11,13 @@ class CRUDfacturas:
         fertilizantes_disponibles = CRUDFertilizante()
         antibioticos_disponibles = CRUDAntibiotico()
 
+        # Llamado al método 'create' de cada CRUD para obtener listas de productos disponibles
+        # en el inventario para cada tipo de producto.
         stock_plagas = plagas_disponibles.create()
         stock_fertilizantes = fertilizantes_disponibles.create()
         stock_antibioticos = antibioticos_disponibles.create()
 
+        #Se crean 5 objetos tipo factura y se le asocian diferentes productos que hay en el stock. 
         factura1=Factura()
         factura1.asociar_antibiotico(stock_antibioticos[0])
         factura1.asociar_producto_control(stock_plagas[0])

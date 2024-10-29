@@ -52,10 +52,58 @@ class UI:
         frecuencia_aplicacion = int(input("Frecuencia de aplicación del producto: "))
         precio_producto = float(input("Precio del producto: "))
         if opcion_elegida_menu_producto == 1:
-            fecha_ultima_aplicacion = str(input("Ingresa"))
-            
-            return nombre_producto, registro_ica, frecuencia_aplicacion, precio_producto
+            fecha_ultima_aplicacion = str(input("Fecha de la última publicación: "))
+            return nombre_producto, registro_ica, frecuencia_aplicacion, precio_producto, fecha_ultima_aplicacion
+        if opcion_elegida_menu_producto == 2:
+            periodo_carencia = int(input("Periodo carencia: "))
+            return nombre_producto, registro_ica, frecuencia_aplicacion, precio_producto,periodo_carencia
 
+    def interfaz_buscar_cliente(self, crud):
+        print("\n" + "="*80)
+        print("\t\tBUSCAR CLIENTE Y LISTAR SUS FACTURAS\n")
+        print("="*80)
+        cedula_cliente = str(input("Digite la cédula del cliente: "))
+        cliente = crud.buscar_por_cedula(cedula_cliente)
+        
+        if cliente:
+            print(f"\nCliente encontrado: {cliente.nombre} (Cédula: {cliente.cedula})")
+            print("\nFACTURAS DEL CLIENTE:")
+            
+            if not cliente.facturas:
+                print("Este cliente no tiene facturas registradas.\n")
+            else:
+                for idx, factura in enumerate(cliente.facturas, start=1):
+                    print(f"\nFactura #{idx}")
+                    print(f"Fecha: {factura.fecha}")
+                    print(f"Valor Total: ${factura.valor_total:.2f}")
+                    print("Productos Comprados:")
+                    
+                    # Listar productos comprados en cada factura
+                    for producto in factura.productos:
+                        if hasattr(producto, 'registro_ica'):  # Producto de Control
+                            print(f"  - {producto.nombre} (Registro ICA: {producto.registro_ica}) "
+                                  f"Frecuencia: {producto.frecuencia_aplicacion} días, Precio: ${producto.valor:.2f}")
+                        elif hasattr(producto, 'dosis'):  # Antibiótico
+                            print(f"  - {producto.nombre} (Dosis: {producto.dosis}Kg) "
+                                  f"Aplicable a: {producto.tipo_animal}, Precio: ${producto.precio:.2f}")
+                    print("-" * 50)
+        else:
+            print("Cliente no encontrado.\n")
+
+
+    def interfaz_eliminar_cliente(self):
+        print("\n" + "="*80)
+        print("\t\tELIMINAR CLIENTE\n")
+        print("="*80)
+        cedula_cliente = str(input("Digite la cédula del cliente a eliminar: "))
+        return cedula_cliente
+    
+    def interfaz_vender_producto(self):
+        print("\n" + "="*80)
+        print("\t\tVENDER PRODUCTO A UN CLIENTE\n")
+        print("="*80)
+        cedula_cliente = str(input("Digite la cédula del cliente para la venta: "))
+        return cedula_cliente
 
 
     

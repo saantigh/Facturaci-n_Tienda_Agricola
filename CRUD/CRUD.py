@@ -3,7 +3,7 @@ class CRUD:
         self.clientes = []
 
     def agregar_cliente(self, cliente):
-        self.clientes.append(cliente)
+        self.clientes.append(cliente) #Inicializa la lista de clientes en el sistema
 
     def buscar_por_cedula(self, cedula):
         for cliente in self.clientes:
@@ -19,6 +19,6 @@ class CRUD:
 
     def asociar_factura(self, cliente, facturas):
         if cliente not in self.clientes:
-            raise ValueError("El cliente no existe.")
+            raise ValueError("El cliente no existe.") 
         cliente.facturas.extend(facturas)
 

@@ -1,6 +1,7 @@
 from Modelo.cliente import Cliente
 
 class CRUDCLiente:
+    #Lista de clientes predefinidos
     @staticmethod
     def create():
         cliente1 = Cliente("Alexandra Ocampo Ruiz","1234556789")

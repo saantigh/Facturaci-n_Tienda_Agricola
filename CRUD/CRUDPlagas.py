@@ -1,5 +1,7 @@
 from Modelo.producto_plagas import ControlPlagas
+
 class CRUDPlagas:
+    #Stock de 5 productos de control(plagas).
     @staticmethod
     def create():
         plaga1 = ControlPlagas("Plaga1","ICA2376",4,54000,15)
